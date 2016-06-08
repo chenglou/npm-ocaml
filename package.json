@@ -1,0 +1,40 @@
+{
+  "bugs": {
+    "url": "https://github.com/chenglou/npm-ocaml/issues"
+  },
+  "dependencies": {
+    "napa": "^2.3.0"
+  },
+  "description": "OCaml Compiler as an Npm Package",
+  "devDependencies": {},
+  "homepage": "https://github.com/chenglou/npm-ocaml#readme",
+  "keywords": [
+    "ocaml",
+    "opam",
+    "reason",
+    "sandbox"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "chenglou92@gmail.com",
+      "name": "chenglou"
+    }
+  ],
+  "name": "ocaml",
+  "napa": {
+    "ocaml_compiler": "ocaml/ocaml#4.02.3"
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chenglou/npm-ocaml.git"
+  },
+  "scripts": {
+    "install": "napa",
+    "postinstall": "cd node_modules/ocaml_compiler && ./configure -no-cfi -prefix `pwd` && make world.opt && make install"
+  },
+  "version": "0.0.2"
+}
